@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+}
+
+.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: darkslateblue;
+  height: 40px;
+}
+
+form {
+  position: relative;
+  display: inline-block;
+}
+form:focus,
+form:hover {
+  outline: none;
+  border: 2px solid #007bff;
+  border-radius: 12px;
+}
+
+input {
+  padding: 0 30px 0 20px;
+  width: 400px;
+  border: none;
+  height: 30px;
+  border-radius: 10px;
+}
+
+input:focus,
+input:hover {
+  outline: none;
+}
+
+button {
+  position: absolute;
+  padding: 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  fill: darkslateblue;
+  width: 15px;
+  height: 15px;
+}
