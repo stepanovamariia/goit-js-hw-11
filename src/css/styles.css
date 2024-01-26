@@ -24,7 +24,7 @@ form:hover {
   border-radius: 12px;
 }
 
-input {
+.form-input {
   padding: 0 30px 0 20px;
   width: 400px;
   border: none;
@@ -37,7 +37,7 @@ input:hover {
   outline: none;
 }
 
-button {
+.form-btn {
   position: absolute;
   padding: 0;
   top: 0;
@@ -52,7 +52,7 @@ button {
   justify-content: center;
 }
 
-.icon {
+.button-icon {
   fill: darkslateblue;
   width: 15px;
   height: 15px;
