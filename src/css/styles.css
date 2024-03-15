@@ -2,7 +2,7 @@ body {
   margin: 0;
 }
 
-.form-container {
+form {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -13,36 +13,28 @@ body {
   height: 40px;
 }
 
-form {
-  position: relative;
-  display: inline-block;
-}
-form:focus,
-form:hover {
-  outline: none;
-  border: 2px solid #007bff;
-  border-radius: 12px;
-}
-
-.form-input {
+input {
   padding: 0 30px 0 20px;
   width: 400px;
   border: none;
   height: 30px;
   border-radius: 10px;
+  transition: border 0.3s ease-in-out;
 }
 
 input:focus,
 input:hover {
   outline: none;
+  border: 2px solid #007bff;
+  border-radius: 12px;
 }
 
-.form-btn {
+button {
   position: absolute;
   padding: 0;
-  top: 0;
-  right: 0;
-  height: 100%;
+  /* top: 0; */
+  right: 415px;
+  height: 30px;
   width: 30px;
   cursor: pointer;
   border: none;
@@ -56,4 +48,58 @@ input:hover {
   fill: darkslateblue;
   width: 15px;
   height: 15px;
+  transition: transform 300ms ease-in-out;
+}
+
+button:hover .button-icon {
+  transform: scale(1.1);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.photo-card {
+  width: calc(
+    25% - 20px
+  ); /* Ширина карточки будет составлять 25% ширины контейнера минус отступы */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 20px; /* Отступ между карточками */
+  margin-bottom: 20px; /* Отступ снизу карточки */
+  /* padding: 10px; */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Учитываем padding и border в общей ширине */
+}
+
+.photo-card img {
+  width: 100%; /* Занимает всю доступную ширину внутри родительского контейнера */
+  height: 210px; /* Подстраивается под соответствующую высоту, сохраняя пропорции */
+  border-radius: 5px; /* Закругляем углы */
+}
+
+/* Стили для информации о фотографии */
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.info-item:last-child {
+  margin-right: 0; /* Убираем отступ справа у последнего элемента информации */
+}
+
+/* Удаление правого отступа у последней карточки в ряду */
+.photo-card:nth-child(4n) {
+  margin-right: 0;
 }
