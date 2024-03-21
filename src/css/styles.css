@@ -29,10 +29,9 @@ input:hover {
   border-radius: 12px;
 }
 
-button {
+.search-btn {
   position: absolute;
   padding: 0;
-  /* top: 0; */
   right: 415px;
   height: 30px;
   width: 30px;
@@ -63,26 +62,25 @@ button:hover .button-icon {
 }
 
 .photo-card {
-  width: calc(
-    25% - 20px
-  ); /* Ширина карточки будет составлять 25% ширины контейнера минус отступы */
+  width: calc(25% - 20px);
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-right: 20px; /* Отступ между карточками */
-  margin-bottom: 20px; /* Отступ снизу карточки */
-  /* padding: 10px; */
+  margin-right: 20px;
+  margin-bottom: 20px;
+
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box; /* Учитываем padding и border в общей ширине */
+  box-sizing: border-box;
   cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
 
 .photo-card img {
-  width: 100%; /* Занимает всю доступную ширину внутри родительского контейнера */
-  height: 210px; /* Подстраивается под соответствующую высоту, сохраняя пропорции */
-  border-radius: 5px; /* Закругляем углы */
+  width: 100%;
+  height: 210px;
+  border-radius: 5px;
 }
 
-/* Стили для информации о фотографии */
 .info {
   display: flex;
   justify-content: space-between;
@@ -98,15 +96,9 @@ button:hover .button-icon {
 }
 
 .info-item:last-child {
-  margin-right: 0; /* Убираем отступ справа у последнего элемента информации */
-}
-
-/* Удаление правого отступа у последней карточки в ряду */
-.photo-card:nth-child(4n) {
   margin-right: 0;
 }
 
-.gallery a {
-  text-decoration: none;
-  color: black;
+.photo-card:nth-child(4n) {
+  margin-right: 0;
 }
