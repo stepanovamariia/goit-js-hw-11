@@ -73,6 +73,7 @@ button:hover .button-icon {
   /* padding: 10px; */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   box-sizing: border-box; /* Учитываем padding и border в общей ширине */
+  cursor: pointer;
 }
 
 .photo-card img {
@@ -93,6 +94,7 @@ button:hover .button-icon {
   flex-direction: column;
   margin-right: 10px;
   font-size: 14px;
+  text-decoration: none;
 }
 
 .info-item:last-child {
@@ -102,4 +104,9 @@ button:hover .button-icon {
 /* Удаление правого отступа у последней карточки в ряду */
 .photo-card:nth-child(4n) {
   margin-right: 0;
+}
+
+.gallery a {
+  text-decoration: none;
+  color: black;
 }

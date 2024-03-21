@@ -1,8 +1,6 @@
 import axios from 'axios';
 
-const input = document.querySelector('input');
-
-function serviceCardsInfo(data) {
+async function serviceCardsInfo(data, page) {
   const BACE_URL = 'https://pixabay.com/api/';
   const API_KEY = '42892988-1a177f86546a7a1e93a2f736f';
 
@@ -12,9 +10,16 @@ function serviceCardsInfo(data) {
     image_type: 'photo',
     orientation: 'horizontal',
     safesearch: 'true',
+    page: page,
+    per_page: 40,
   });
 
-  return axios.get(`${BACE_URL}?${params}`).then(({ data }) => data);
+  try {
+    const response = await axios.get(`${BACE_URL}?${params}`);
+    return response.data;
+  } catch (error) {
+    throw new Error('Failed to fetch data from Pixabay API');
+  }
 }
 
 export { serviceCardsInfo };
