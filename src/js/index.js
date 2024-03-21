@@ -40,7 +40,6 @@ async function handleSubmit(event) {
     refs.gallery.innerHTML = markup;
     currentPage += 1;
     observer.observe(refs.target);
-    console.log(data);
 
     lightbox = new SimpleLightbox('.gallery a', {
       captionsData: 'alt',
