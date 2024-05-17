@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-async function serviceCardsInfo(data, page) {
+async function serviceCardsInfo(data) {
   const BACE_URL = 'https://pixabay.com/api/';
   const API_KEY = '42892988-1a177f86546a7a1e93a2f736f';
 
@@ -10,7 +10,7 @@ async function serviceCardsInfo(data, page) {
     image_type: 'photo',
     orientation: 'horizontal',
     safesearch: 'true',
-    page: page,
+    page: 1,
     per_page: 40,
   });
 
